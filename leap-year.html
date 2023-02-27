@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check the leap year</title>
+</head>
+<body>
+<h1>Check the Leap year</h1>
+<input type="number" id="num" >
+<p id="result"></p>
+<button type="button" id="button" >Click</button>
+
+<script>
+  let select1=document.getElementById("button");
+  select1.addEventListener("click",checkyear);
+  let isleapyear= false;
+let select=document.getElementById("num").value;
+  let a = parseInt(select);
+  function checkyear() {
+
+    if (a%4==0) {
+        if (a%100==0) {
+            if (a%400==0) {
+                isleapyear=true;
+            }
+        }
+
+    } else isleapyear=true;
+
+    if (isleapyear) {
+        document.getElementById("result").innerHTML="this is a leap year";
+    } else  {
+        document.getElementById("resul").innerHTML="this is a not a leap year";
+    }
+
+
+  }
+
+
+</script>
+</body>
+</html>
